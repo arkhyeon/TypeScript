@@ -15,8 +15,8 @@ function Nomad() {
   };
 
   if (player.age && player.age < 10) {
+    console.log(player);
   }
-  console.log(player);
   return <div />;
 }
 
