@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import React from 'react';
 
 function App() {
-  /**let count = 0; // 숫자
+  /** let count = 0; // 숫자
   count += 1;
   count = '갑자기 분위기 문자열'; // 이러면 에러가 납니다!
 
@@ -21,8 +21,12 @@ function App() {
   color = 'yellow';
   color = 'green'; // 에러 발생! */
 
-  function sum(x: number, y: number){
+  function sum(x: number, y: number) {
     return x + y;
+  }
+
+  function returnNothing(): void {
+    console.log('I am just saying hello world');
   }
 
   function sumArray(numbers: number[]): number {
@@ -32,18 +36,14 @@ function App() {
 
   const total = sumArray([1, 2, 3, 4, 5]);
 
-  function returnNothing(): void {
-    console.log('I am just saying hello world');
-  }
-
   return (
     <div className="App">
       <header className="App-header">
-        {sum(1,2)}
+        {sum(1, 2)}
         {total}
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

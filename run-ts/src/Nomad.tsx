@@ -14,14 +14,10 @@ function Nomad() {
     name: 'nico',
   };
 
-
-  
-
-
   if (player.age && player.age < 10) {
   }
   console.log(player);
-  return <div></div>;
+  return <div />;
 }
 
 export default Nomad;
