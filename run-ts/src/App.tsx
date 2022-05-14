@@ -1,7 +1,7 @@
 import React, {FormEvent, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ReducerType } from './rootReducer';
-import { User, addUser } from './Slices/users';
+import { User, addUser } from './modules/createSlice';
 
 function App() {
   /** let count = 0; // 숫자
@@ -38,7 +38,6 @@ function App() {
   }
 
   const total = sumArray([1, 2, 3, 4, 5]);
-
 
   const users = useSelector<ReducerType, User[]>(state=> state.users);
   const dispatch = useDispatch();
