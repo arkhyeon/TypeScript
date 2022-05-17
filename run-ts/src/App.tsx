@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ReducerType } from './rootReducer';
 import { User, addUser } from './modules/createSlice';
+import Greetings from './Greetings';
 
 function App() {
   const users = useSelector<ReducerType, User[]>((state) => state.users);
@@ -19,8 +20,13 @@ function App() {
     setName('');
   };
 
+  const onClick = (name: string) => {
+    console.log(name);
+  };
+
   return (
     <div className="App">
+      <Greetings name="Jang DC" onClick={onClick} />
       <form onSubmit={handleAddUser}>
         <input type="text" value={name} onChange={handleChangeName} />
         <button type="submit">Add User</button>

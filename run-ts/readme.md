@@ -12,3 +12,13 @@
     //Error : 타입 정의보다 더 많은, 혹은 더 적은 원소를 갖는 배열을 할당
     const invalidNameAndHeight: [string, number] = ['안희종', 176, 42];
     ```
+    
+React.FC 이점
+childer props 기본적으로 탑재
+children: React.ReactNode 선언 안해줘도됨
+
+Grettings. 등등의 내부 메소드 자동 완성
+
+치명적인 단점 defaultProps 제대로 작동안함 > 비구조할당해서 사용해야함
+
+화살표 함수가 아닌 function형으로 선언
