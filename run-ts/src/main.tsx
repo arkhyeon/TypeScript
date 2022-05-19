@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider, useDispatch } from 'react-redux';
-import {configureStore, getDefaultMiddleware} from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import App from './App';
-import reducer from "./rootReducer";
+import rootReducer from './modules/index';
 
-const middleware = [ ...getDefaultMiddleware(), logger ];
 const store = configureStore({
-    reducer,
-    middleware,
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
-type AppDispatch = typeof store.dispatch
+
+// type AppDispatch = typeof store.dispatch
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
