@@ -11,6 +11,9 @@ function TodoInsert({ onInsert }: TodoInsertProps) {
   };
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
+    if (value === '') {
+      return;
+    }
     onInsert(value);
     setValue('');
   };
