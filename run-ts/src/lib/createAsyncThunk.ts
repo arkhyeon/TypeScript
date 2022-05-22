@@ -7,6 +7,7 @@ export default function createAsyncThunk<
   A extends AnyAsyncActionCreator,
   F extends (...params: any[]) => Promise<any>,
 >(asyncActionCreator: A, promiseCreator: F) {
+  // 배열 요소 타입 배열로 추출
   type Params = Parameters<F>;
   return function thunk(...params: Params) {
     return async (dispatch: Dispatch) => {
