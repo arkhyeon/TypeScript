@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { User, addUser } from './modules/createSlice';
+import { addUser, User } from './modules/createSlice';
 import { RootState } from './modules/index';
 import Greetings from './Greetings';
 import Counter from './Counter';
@@ -8,7 +8,6 @@ import MyForm from './MyForm';
 import ReducerSample from './ReducerSample';
 import CounterContainer from './CounterContainer';
 import TodoApp from './TodoApp';
-import GithubUsernameForm from './components/GithubUsernameForm';
 import GithubProfileLoader from './components/GithubProfileLoader';
 
 function App() {
@@ -27,8 +26,8 @@ function App() {
     setName('');
   };
 
-  const onClick = (name: string) => {
-    console.log(name);
+  const onClick = (clickName: string) => {
+    console.log(clickName);
   };
 
   const onSubmit = (form: { name: string; description: string }) => {
