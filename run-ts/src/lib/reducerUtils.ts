@@ -26,7 +26,7 @@ export const asyncState = {
   error: <T, E>(error: E): AsyncState<T, E> => ({
     loading: false,
     data: null,
-    error: error,
+    error,
   }),
 };
 
