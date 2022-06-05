@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>{listNum.map((num) => {
-          return <div>{num}</div>;
+        <div>{num.map((num) => {
+          return <div>{num.id}</div>;
         })}</div>
       </header>
     </div>
